@@ -22,7 +22,7 @@ public class Student {
     @Size(max = 150, message = "Email must be at most 150 characters")
     private String email;
 
-    @Size(max = 100, message = "Course must be at most 100 characters")
+    @Size(max = 50, message = "Course must be at most 50 characters")
     private String course;
 
     public Student() {
