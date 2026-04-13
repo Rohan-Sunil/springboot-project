@@ -1,0 +1,32 @@
+:root{
+  --bg: #0f172a;
+  --panel: #111827;
+  --muted: #94a3b8;
+  --text: #e5e7eb;
+  --accent: #6366f1;
+  --accent-2: #22d3ee;
+  --danger: #ef4444;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, 'Apple Color Emoji','Segoe UI Emoji'}
+.container{max-width:1000px;margin:32px auto;padding:0 16px}
+h1{font-size:28px;margin:0 0 16px}
+h2{font-size:20px;margin:0 0 12px}
+.form-section,.toolbar,table{background:var(--panel);border:1px solid #1f2937;border-radius:12px}
+.form-section{padding:16px;margin:0 0 16px}
+.field{display:flex;gap:12px;align-items:center;margin:8px 0}
+.field label{min-width:80px;color:var(--muted)}
+.field input{flex:1;padding:10px 12px;background:#0b1220;border:1px solid #1f2937;border-radius:8px;color:var(--text)}
+.actions{display:flex;gap:10px;margin-top:10px}
+button{padding:10px 14px;border-radius:8px;border:1px solid transparent;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:white;cursor:pointer}
+button.secondary{background:#0b1220;border-color:#1f2937;color:var(--text)}
+button.danger{background:linear-gradient(135deg,#b91c1c,var(--danger))}
+button:disabled{opacity:.6;cursor:not-allowed}
+.toolbar{padding:12px;margin:0 0 12px;display:flex;gap:10px;align-items:center}
+.toolbar input{flex:1;padding:10px 12px;background:#0b1220;border:1px solid #1f2937;border-radius:8px;color:var(--text)}
+table{width:100%;border-collapse:collapse;overflow:hidden}
+th,td{padding:12px;border-top:1px solid #1f2937}
+th{color:var(--muted);text-align:left}
+tr:hover td{background:#0b1220}
+.status{margin-top:10px;color:var(--muted)}
+.errors{margin-top:10px;color:var(--danger)}

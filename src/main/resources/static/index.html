@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Management</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Student Management</h1>
+
+    <section class="form-section">
+      <h2 id="form-title">Add Student</h2>
+      <form id="student-form">
+        <input type="hidden" id="student-id" />
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Jane Doe" required maxlength="100" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="jane@example.com" maxlength="150" />
+        </div>
+        <div class="field">
+          <label for="course">Course</label>
+          <input id="course" name="course" type="text" placeholder="B.Sc Computer Science" maxlength="100" />
+        </div>
+        <div class="actions">
+          <button type="submit" id="save-btn">Save</button>
+          <button type="button" id="cancel-btn" class="secondary">Cancel</button>
+        </div>
+      </form>
+      <div id="form-errors" class="errors" hidden></div>
+    </section>
+
+    <section>
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Search by name, email, course..." />
+        <button id="refresh-btn" class="secondary">Refresh</button>
+      </div>
+      <table id="students-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div id="status" class="status"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+  </body>
+</html>
